@@ -65,43 +65,43 @@
 		[CCMenuItemFont setFontSize:28];
 		
 		// to avoid a retain-cycle with the menuitem and blocks
-		__block id copy_self = self;
-		
-		// Achievement Menu Item using blocks
-		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
-			
-			
-			GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-			achivementViewController.achievementDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:achivementViewController animated:YES];
-			
-		}];
-		
-		// Leaderboard Menu Item using blocks
-		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
-			
-			
-			GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-			leaderboardViewController.leaderboardDelegate = copy_self;
-			
-			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-			
-			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-			
-		}];
+//		__block id copy_self = self;
+//		
+//		// Achievement Menu Item using blocks
+//		CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
+//			
+//			
+//			GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
+//			achivementViewController.achievementDelegate = copy_self;
+//			
+//			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+//			
+//			[[app navController] presentModalViewController:achivementViewController animated:YES];
+//			
+//		}];
+//		
+//		// Leaderboard Menu Item using blocks
+//		CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
+//			
+//			
+//			GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
+//			leaderboardViewController.leaderboardDelegate = copy_self;
+//			
+//			AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
+//			
+//			[[app navController] presentModalViewController:leaderboardViewController animated:YES];
+//			
+//		}];
 
 		
-		CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, nil];
-		
-		[menu alignItemsHorizontallyWithPadding:20];
-		[menu setPosition:ccp( size.width/2, size.height/2 )];
-		
-		// Add the menu to the layer
-		[self addChild:menu];
-        
+//		CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, nil];
+//		
+//		[menu alignItemsHorizontallyWithPadding:20];
+//		[menu setPosition:ccp( size.width/2, size.height/2 )];
+//		
+//		// Add the menu to the layer
+//		[self addChild:menu];
+//        
         /*
          * The entrance to the game layer
          */
@@ -130,10 +130,11 @@
 	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
 	[[app navController] dismissModalViewControllerAnimated:YES];
 }
-- (void)onButtonClicked
+- (void)onButtonClicked:(CCNode*)sender
 {
     //[super onEnter];
-    [[CCDirector sharedDirector]replaceScene:[GameLayer Scene]];
+    [[CCDirector sharedDirector]pushScene:[GameLayer Scene]];
+    //[[CCDirector sharedDirector]replaceScene:[GameLayer Scene]];
 }
 /*
  the main entrance of the game layer

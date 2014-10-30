@@ -7,8 +7,9 @@
 //
 
 #import "GameLayer.h"
-
 #import <UIKit/UIKit.h>
+
+#define EXIT -100
 @implementation GameLayer
 @synthesize groundHeight;
 
@@ -56,7 +57,18 @@
     [replay setDelegate: self];
     [replay setPosition:CGPointMake(_winSize.width-[replay contentSize].width,_winSize.height-[replay contentSize].height)];
     [self addChild:replay];
-    NSLog(@"width:%f",[replay contentSize].width);
+    
+    /*
+     set the exit button
+     */
+    CCButton    *exit = [[CCButton alloc]initWithTitle:@"EXIT" size:CGSizeMake(100, 40)];
+    [exit setTouchEnabled:YES];
+    [exit setDelegate:self];
+    [exit setFontColor:ccRED];
+    [exit setTag:EXIT];
+    [exit setPosition:CGPointMake(_winSize.width-[exit contentSize].width,[exit contentSize].height)];
+    [self addChild:exit z:1];
+//    NSLog(@"width:%f",[replay contentSize].width);
     /*
      count down three to ready to start
      */
@@ -242,9 +254,14 @@
     
 }
 #pragma mark- ccbuttonaction event
-- (void)onButtonClicked
+- (void)onButtonClicked:(CCNode*)sender
 {
-    [self gameResume];
+    if(EXIT == [sender tag])
+    {
+        [[CCDirector sharedDirector]popScene];
+    }
+    else
+      [self gameResume];
 }
 #pragma mark - the main loop of this game
 - (void)mainLoop

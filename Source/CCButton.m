@@ -17,7 +17,6 @@
     if(self = [super init])
     {
         _titleLabel = [CCLabelTTF labelWithString:title fontName:@"Marker Felt" fontSize:28];
-//        [_titleLabel setPosition:CGPointMake(size.width*0.5, size.height*0.5)];
         [self setContentSize:CGSizeMake([_titleLabel contentSize].width, [_titleLabel contentSize].height)];
         [self setTouchMode:kCCTouchesOneByOne];
         [self addChild:_titleLabel];
@@ -25,12 +24,15 @@
         //[self ini]
        
       //  [self setContentSize: size];
-        
-      
+     
     }
     return self;
 }
- 
+- (void)setFontColor:(ccColor3B)RGB
+{
+    if(_titleLabel)
+        [_titleLabel setColor:RGB];
+}
 #pragma mark- Touch event handle
 - (void)setTounFunc:(_TouchFunc)func
 {
@@ -69,7 +71,7 @@
 
         _touched = YES;
         [self doTouchAnimation:_titleLabel];
-        [delegate onButtonClicked];
+        [delegate onButtonClicked:self];
         
     }
 }

@@ -25,5 +25,6 @@ typedef void(*_TouchFunc)(int);
 - (void)setTounFunc:(_TouchFunc)func;
 - (void)doTouchAnimation:(CCNode*)node ;
 - (BOOL)isPointInArea:(CGPoint) point;
+- (void)setFontColor:(ccColor3B)RGB;
 
 @end

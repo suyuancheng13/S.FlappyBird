@@ -10,5 +10,5 @@
 
 @protocol CCButtonAction <NSObject>
 @required
-- (void)onButtonClicked;
+- (void)onButtonClicked:(CCNode*)sender;
 @end
