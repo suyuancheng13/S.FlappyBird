@@ -67,11 +67,7 @@
     _role = [[Role alloc ]initWithAcceleration:0.6 constspeed:5];
     [_role setPosition:CGPointMake(_winSize.width/5, _winSize.height*3/4)];
     [self addChild:_role z:1];
-//    ccBezierConfig bezier;
-//    bezier.controlPoint_1 = CGPointMake(0, 50);
-//    bezier.controlPoint_2 = CGPointMake(0, 100);
-//    bezier.endPosition = CGPointMake(50, 100);
-//    [_role runAction:[CCBezierTo actionWithDuration:1 bezier:bezier]];
+
     
 }
 - (void)initCollision
@@ -213,8 +209,13 @@
     [menu setTag:MENUTAG];
     [menu setPosition:ccp( _winSize.width/2, _winSize.height/2 )];
     [self addChild:menu];
-  
-//    [menu runAction:[CCSequence actions:[CCScaleTo actionWithDuration:0.5 scaleX:1.1 scaleY:1.2], [CCScaleTo actionWithDuration:0.05 scaleX:1 scaleY:1],nil]];
+    
+    ccBezierConfig bezier;
+    bezier.controlPoint_1 = CGPointMake(50, 0);
+    bezier.controlPoint_2 = CGPointMake(0, 100);
+    bezier.endPosition = ccp( _winSize.width/2, _winSize.height/2 );
+    [menu runAction:[CCBezierTo actionWithDuration:1 bezier:bezier]];
+
 }
 
 - (void)gameResume

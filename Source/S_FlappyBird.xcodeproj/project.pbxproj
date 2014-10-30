@@ -263,7 +263,6 @@
 		E516435B19F1119E003AA293 /* cocos2d_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = E516435A19F1119E003AA293 /* cocos2d_lib.m */; };
 		E516435F19F11207003AA293 /* libcocos2d-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E516435419F1119E003AA293 /* libcocos2d-lib.a */; };
 		E5B817621A0088980097D5E5 /* music.aifc in Resources */ = {isa = PBXBuildFile; fileRef = E5B817611A0088980097D5E5 /* music.aifc */; };
-		E5B8177B1A02192D0097D5E5 /* sdf.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8177A1A02192D0097D5E5 /* sdf.m */; };
 		E5BECC9F19F9EC7F006118DA /* step.caf in Resources */ = {isa = PBXBuildFile; fileRef = E5BECC9E19F9EC7F006118DA /* step.caf */; };
 		E5BECCA119F9EFB1006118DA /* sound1.caf in Resources */ = {isa = PBXBuildFile; fileRef = E5BECCA019F9EFB1006118DA /* sound1.caf */; };
 		E5DEF57019F0B268002D7A1B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5DEF56F19F0B268002D7A1B /* QuartzCore.framework */; };
@@ -563,8 +562,6 @@
 		E516435A19F1119E003AA293 /* cocos2d_lib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocos2d_lib.m; sourceTree = "<group>"; };
 		E5B817611A0088980097D5E5 /* music.aifc */ = {isa = PBXFileReference; lastKnownFileType = file; name = music.aifc; path = Resources/music.aifc; sourceTree = "<group>"; };
 		E5B817681A00DDFC0097D5E5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		E5B817791A02192D0097D5E5 /* sdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdf.h; sourceTree = "<group>"; };
-		E5B8177A1A02192D0097D5E5 /* sdf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdf.m; sourceTree = "<group>"; };
 		E5BECC9E19F9EC7F006118DA /* step.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = step.caf; path = Resources/step.caf; sourceTree = "<group>"; };
 		E5BECCA019F9EFB1006118DA /* sound1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound1.caf; path = Resources/sound1.caf; sourceTree = "<group>"; };
 		E5DEF56B19F0B268002D7A1B /* S_FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = S_FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -996,8 +993,6 @@
 				E508A44A19F3FD2100DCCA34 /* BarPie.m */,
 				E508A44C19F3FD8600DCCA34 /* Role.h */,
 				E508A44D19F3FD8700DCCA34 /* Role.m */,
-				E5B817791A02192D0097D5E5 /* sdf.h */,
-				E5B8177A1A02192D0097D5E5 /* sdf.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1492,7 +1487,6 @@
 				E508A44819F3FCEC00DCCA34 /* GameLayer.m in Sources */,
 				E508A44B19F3FD2100DCCA34 /* BarPie.m in Sources */,
 				E508A44E19F3FD8800DCCA34 /* Role.m in Sources */,
-				E5B8177B1A02192D0097D5E5 /* sdf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
