@@ -45,7 +45,7 @@
 - (BOOL)isPointInArea:(CGPoint) point
 {
     
-    CGRect Rect = CGRectMake(0, 0, [self contentSize].width, [self contentSize].height);
+//    CGRect Rect = CGRectMake(0, 0, [self contentSize].width, [self contentSize].height);
     //if(Rect.origin.x<point.x&&Rect.origin.y)
 }
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
